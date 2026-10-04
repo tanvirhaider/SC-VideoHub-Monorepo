@@ -1,0 +1,14 @@
+node_modules
+dist
+dist-ssr
+*.zip
+*.local
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# Source video: ~840 MB across the five projects. Kept in Dropbox, which
+# already syncs and backs it up; `npm run build` copies public/ into dist/, so
+# dist.zip still ships it. A fresh clone has no videos until synced in.
+*/public/assets/**/*.mp4

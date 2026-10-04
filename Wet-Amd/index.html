@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Share-Care - Jessica - Wet-AMD</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="#" />
+	<link rel="stylesheet" href="/src/css/main.css">
+	<!--
+		Libraries (gsap, Swiper, iframe-resizer, the Baymax player) are npm/shared
+		modules imported by src/main.js. Adobe DTM, GA4 and Matomo are injected by
+		shared/js/tracking from .env / .env.development. Add ?debug to the URL to
+		see tracking.
+	-->
+</head>
+<body>
+
+    <div id='interactive-player' class='show-jessica show-thumbnail buffering'>
+		<div id='skip-intro' class='skip-intro-style hide'><div class='copy'>Skip intro</div><div class='icon'></div></div>
+		<div class='startpage'>
+			<div id='intro-copy' class="copy">
+				<div class='title'></div>
+				<div class='sub-title'></div>
+				<div class="bigplaybutton"><div class='btn-copy'>Meet Jessica</div><div class='icon'></div></div>
+			</div>
+			<div class="avatorstill"></div>
+		
+		</div>
+		<div class='cover'></div>
+		<div id='avator-container-mobile' class='hide'>
+			<div id="mobile-menu" class='blob-2'></div>
+			<div id='mobile-video-cover'></div>
+			<video id='mobile-avator-player' playsinline webkit-playsinline poster="/assets/jessica-mobile-poster.jpg"></video>
+		</div>
+		
+		<div class='blob-container'>
+			<div class='blob-1 hide'></div>
+			<div id="desktop-menu" class='blob-2'></div>
+			<div id='generic-blob-overlay' class='generic-blob overlay-blob'></div>
+			<div id='end-screen-menu' class='end-screen'>
+				<div class="endscreen-logo"></div>
+				<div class='title'></div>
+				<div class="sub-title"></div>
+			</div>
+			<div class='nav'>
+				<div id='resume-jessica' class='nav-items nav-btns'><div class='copy'>Resume</div></div>
+				<div id='pause-jessica' class='nav-items nav-btns'><div class='copy'>Pause Jessica</div></div>
+			</div>
+		</div>
+		<div id='avator-container-desktop' class='hide'>
+			<video id='desktop-avator-player' autoplay playsinline webkit-playsinline poster="/assets/jessica-desktop-poster.png"></video>
+		</div> 
+
+        <div id="media-container"></div>
+		<div id='nav-container'>
+			<div id='back-to-topics' class='nav-items'><div class='icon'></div><div class='copy'>Back to Topics List</div></div>
+
+			<div id='show-jessica' class='nav-items nav-btns'><div class='icon'></div><div class='copy'>Show Jessica</div></div>
+
+			<div id='hide-jessica' class='nav-items nav-btns'><div class='icon'></div><div class='copy'>Hide Jessica</div></div>
+		</div>
+        <div id='playlist'>
+            <div class='show-hide-btn'><div class="arrow-down-btn"></div></div>
+			<div class='tumbnail-dot-container'></div>
+            <div class='thumb-container'></div>
+			<div class="swiper thumb-container-mobile"><div class='swiper-wrapper'></div></div>
+			<div id='mobile-nav-arrows'>
+				<div class='swiper-button-next'></div>
+				<div class='swiper-button-prev'></div>
+			</div>
+
+        </div>
+
+    </div>
+
+	<script type="module" src="/src/main.js"></script>
+
+</body>
+</html>

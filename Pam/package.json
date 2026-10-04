@@ -1,0 +1,13 @@
+{
+  "name": "@videohub/pam",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "prebuild": "node ../shared/scripts/bump-version.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "postbuild": "cd dist && zip -qr ../dist.zip . && cd .."
+  }
+}

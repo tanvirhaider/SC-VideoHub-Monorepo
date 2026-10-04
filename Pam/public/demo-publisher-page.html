@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEMO PUBLISHER PAGE</title>
+    <!-- <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex"> -->
+    <!-- polyfill.io script removed: the domain was taken over and served malware in 2024. -->
+    <link rel="shortcut icon" href="%23?ckcachebust=681917500" />
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        embed snippet beloe ::::::::::::::::::::::::::::::
+        ::::::::::::::::::::::::::::::::::::::::::::::::::
+        ::::::::::::::::::::::::::::::::::::::::::::::::::
+    -->
+    <iframe 
+        id="IH-interactive" 
+        src="./index.html" 
+        onload="iframeLoaded(event)" 
+        style="border:0px #ffffff none;" 
+        name="IH-interactive" 
+        scrolling="no" 
+        frameborder="0" 
+        marginheight="0px" 
+        marginwidth="0px" 
+        height="100%" 
+        width="100%" 
+        allowfullscreen>
+    </iframe>
+
+
+    <script type="text/javascript">
+        
+        function iframeLoaded(event) {
+            try { event.target.height = event.target.contentWindow.document.body.scrollHeight  + "px";} catch (Error) {}
+            var iFrameID = event.target;
+            
+            window.addEventListener('resize', (event) => {
+                setTimeout(iResize, 1000);
+                function iResize () {
+                    iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+                    console.log("browser resized");
+                }
+            });
+        } 
+
+    </script>   
+    
+
+    
+</body>
+</html>

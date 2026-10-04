@@ -1,0 +1,26 @@
+/*
+ * Presentational children of a scripted button must not be click targets.
+ *
+ * shared/js/a11y/makeButtons.js sets role="button" on every tracked control.
+ * Without this rule, a click on a button's label or icon makes that child the
+ * event target, which breaks two things:
+ *   1. Matomo Tag Manager uses it as mtm.clickElement, and the container's
+ *      AllElementsClick trigger matches only the button itself, so the click
+ *      goes unreported.
+ *   2. Handlers that read event.target.dataset get undefined.
+ *
+ * Scoped to [role="button"], so it can't affect anything else.
+ */
+[role="button"] > * {
+  pointer-events: none;
+}
+
+/*
+ * Matomo's click tag labels a click with the element's innerText. The playlist
+ * thumbnails' "NOW PLAYING" badge is drawn from a data attribute so it isn't
+ * part of that text: the click reports as "Renee's Story", not
+ * "NOW PLAYING Renee's Story". It looks the same as when it was a text node.
+ */
+.thumb-status[data-label]::before {
+  content: attr(data-label);
+}

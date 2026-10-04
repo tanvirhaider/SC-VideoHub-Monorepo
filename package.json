@@ -1,0 +1,32 @@
+{
+  "name": "video-hub",
+  "private": true,
+  "workspaces": [
+    "Csu",
+    "Pam",
+    "Type-2-Diabetes",
+    "Vms",
+    "Wet-Amd"
+  ],
+  "scripts": {
+    "dev:csu": "npm run dev -w Csu",
+    "dev:pam": "npm run dev -w Pam",
+    "dev:t2d": "npm run dev -w Type-2-Diabetes",
+    "dev:vms": "npm run dev -w Vms",
+    "dev:wet-amd": "npm run dev -w Wet-Amd",
+    "build": "npm run build --workspaces",
+    "build:csu": "npm run build -w Csu",
+    "build:pam": "npm run build -w Pam",
+    "build:t2d": "npm run build -w Type-2-Diabetes",
+    "build:vms": "npm run build -w Vms",
+    "build:wet-amd": "npm run build -w Wet-Amd"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "iframe-resizer": "4.3.2",
+    "swiper": "7.4.1"
+  },
+  "devDependencies": {
+    "vite": "^6.4.3"
+  }
+}
